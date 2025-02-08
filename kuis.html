@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kuis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Kuis</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Education</a></div>
+            <ul class="links">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li><a href="berlangganan.html">Berlangganan</a></li>
+                <li><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+                <li><a href="about.html">Belajar HTML</a></li>
+            </ul>
+            <a href="kuis.html" class="action_btn"></a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="berlangganan.html">Berlangganan</a></li>
+            <li><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="kuis.html" class="action_btn">KUIS</a></li>
+        </div>
+    </header>
+    <!-- soal nomor 1 -->
+    <div class="container">
+        <div class="quiz">
+            <div>
+                <label class="border" for="">1. Apa kepanjangan HTML ?</label><br>
+                <input class="border" type="radio" name="no1"> Cascading Style Sheets<br>
+                <input class="border" type="radio" name="no1" id="jno1"> HyperText Markup Language<br>
+                <input class="border" type="radio" name="no1"> Scrpt.js <br>
+                <input class="border" type="radio" name="no1"> java <br>
+                <div id="rno1"></div>
+            </div>
+        </div>
+        <!-- soal nomor 2 -->
+
+        <div class="quiz">
+            <div>
+                <label class="border" for="">2. Apa itu h1 ?</label><br>
+                <input class="border" type="radio" name="no2" id="jno2">Heading 1<br>
+                <input class="border" type="radio" name="no2"> Header<br>
+                <input class="border" type="radio" name="no2"> Head <br>
+                <input class="border" type="radio" name="no2"> hgroup1<br>
+                <div id="rno2"></div>
+            </div>
+        </div>
+        <!-- soal nomor 3 -->
+        <div class="quiz">
+            <div>
+                <label class="border" for="">3. Apa itu p ?</label><br>
+                <input class="border" type="radio" name="no3" id="jno3"> Paragraf<br>
+                <input class="border" type="radio" name="no3"> param<br>
+                <input class="border" type="radio" name="no3"> picture<br>
+                <input class="border" type="radio" name="no3"> prog<br>
+                <div id="rno3"></div>
+            </div>
+        </div>
+
+        <!-- soal nomor 4 -->
+        <div class="quiz">
+            <div>
+                <label class="border" for="">4. Apa itu script di pemrograman web?</label><br>
+                <input class="border" type="radio" name="no4"> untuk memberikan skin palsu di ml<br>
+                <input class="border" type="radio" name="no4"> skripsi<br>
+                <input class="border" type="radio" name="no4" id="jno4"> untuk menambahkan codingan script.js<br>
+                <input class="border" type="radio" name="no4"> untuk naskah film<br>
+                <div id="rno4"></div>
+            </div>
+        </div>
+
+        <!-- soal nomor 5 -->
+        <div class="quiz">
+            <div>
+                <label class="border" for="">5. Di bawah ini yang merupakan syntax di html adalah</label><br>
+                <input class="border" type="radio" name="no5">body<br>
+                <input class="border" type="radio" name="no5"> title<br>
+                <input class="border" type="radio" name="no5"> p<br>
+                <input class="border" type="radio" name="no5" id="jno5">semua benar<br>
+                <div id="rno5"></div><br>
+            </div>
+        </div>
+        <button id="submitBtn" onclick="kirim()">Kirim</button>
+    </div>
+    <script>
+        function kirim() {
+            const jno1 = document.querySelector('#jno1')
+            const jno2 = document.querySelector('#jno2')
+            const jno3 = document.querySelector('#jno3')
+            const jno4 = document.querySelector('#jno4')
+            const jno5 = document.querySelector('#jno5')
+
+            const rno1 = document.querySelector('#rno1')
+            const rno2 = document.querySelector('#rno2')
+            const rno3 = document.querySelector('#rno3')
+            const rno4 = document.querySelector('#rno4')
+            const rno5 = document.querySelector('#rno5')
+
+
+
+            let response
+            if (jno1.checked) {
+                response = 'Jawaban Kamu benar'
+                rno1.style = 'color : green;'
+            } else {
+                response = 'Jawaban Kamu Salah'
+                rno1.style = 'color : red;'
+            }
+            rno1.innerHTML = response
+
+            if (jno2.checked) {
+                response = 'Jawaban Kamu benar'
+                rno2.style = 'color : green;'
+            } else {
+                response = 'Jawaban Kamu Salah'
+                rno2.style = 'color : red;'
+            }
+            rno2.innerHTML = response
+
+            if (jno3.checked) {
+                response = 'Jawaban Kamu benar'
+                rno3.style = 'color : green;'
+            } else {
+                response = 'Jawaban Kamu Salah'
+                rno3.style = 'color : red;'
+            }
+            rno3.innerHTML = response
+
+            if (jno4.checked) {
+                response = 'Jawaban Kamu benar'
+                rno4.style = 'color : green;'
+            } else {
+                response = 'Jawaban Kamu Salah'
+                rno4.style = 'color : red;'
+            }
+            rno4.innerHTML = response
+
+            if (jno5.checked) {
+                response = 'Jawaban Kamu benar'
+                rno5.style = 'color : green;'
+            } else {
+                response = 'Jawaban Kamu Salah'
+                rno5.style = 'color : red;'
+            }
+            rno5.innerHTML = response
+        }
+
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>

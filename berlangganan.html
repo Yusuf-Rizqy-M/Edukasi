@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="berlangganan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Berlangganan</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Education</a></div>
+            <ul class="links">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="kalkulator"><a href="berlangganan.html">Berlangganan</a></li>
+                <li><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+                <li><a href="about.html">Belajar HTML</a></li>
+            </ul>
+            <a href="kuis.html" class="action_btn">KUIS</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="berlangganan.html">Berlangganan</a></li>
+            <li><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+            <li><a href="about.html">Belajar HTML</a></li>
+            <li><a href="kuis.html" class="action_btn">KUIS</a></li>
+        </div>
+    </header>
+    <main>
+        <div id="menuContainer">
+            <div class="menu">
+                <h2>Menu Pilihan</h2>
+                <label for="menuOptions">Pilih Menu:</label>
+                <select id="menuOptions" name="menuOptions" onchange="calculateTotal()">
+                    <option value="Berlanggganan Tahunan" data-price="500000">Berlanggganan Tahunan - Rp. 500.000</option>
+                    <option value="Berlangganan Bulanan" data-price="100000">Berlangganan Bulanan Rp. 100.000</option>
+                    <option value="Berlangganan 5 Tahun" data-price="2300000">Berlangganan 5 Tahun - Rp. 2.300.000</option>
+                </select>
+      
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" onchange="calculateTotal()">
+                <label for="total">Total Harga:</label>
+                <span id="total">Rp 0</span>
+      
+                <button type="button" class="button-submit" onclick="submitOrder()">Pesan Sekarang</button>
+            </div>
+        </div>
+    </main>
+    <script src="berlangganan.js"></script>
+</body>
+
+</html>

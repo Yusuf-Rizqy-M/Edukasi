@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tips-belajar-efektif.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tips Belajar Efektif</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Education</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="berlangganan.html">Berlangganan</a></li>
+                <li id="kuis"><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+                <li><a href="about.html">Belajar HTML</a></li>
+            </ul>
+            <a href="kuis.html" class="action_btn">KUIS</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="berlangganan.html">Berlangganan</a></li>
+            <li><a href="tips-belajar-efektif.html">Tips Belajar Efektif</a></li>
+            <li><a href="about.html">Belajar HTML</a></li>
+            <li><a href="kuis.html" class="action_btn">KUIS</a></li>
+        </div>
+    </header>
+    <div class="content fadeIn">
+        <div class="content">
+            <h1 align="center">Tips Belajar Efektif</h1>
+            <div class="main-content">
+                <p>Setiap anak menghadapi tantangan atau hambatan selama proses belajar, baik faktor internal maupun
+                    eksternal. Masalah belajar ini harus ditangani dengan baik agar anak bisa mencapai <br> prestasi
+                    yang memuaskan. Oleh karena itu, diperlukan cara belajar efektif untuk mencapai tujuan tersebut.
+                    Cara belajar setiap siswa pun berbeda-beda karena perbedaan lingkungan dan keanekaragaman pribadi
+                    siswa.</p>
+            </div>
+            <div class="cara-belajar">
+                <h2>Berikut Tips yang Bisa Dilakukan untuk Belajar Lebih Efektif</h2>
+                <!-- Tambahkan daftar cara belajar efektif -->
+                <ul>
+                    <li><strong>Cara pertama :</strong> Belajar Kelompok</li>
+                    <li><strong>Cara kedua :</strong> Luangkan waktu untuk belajar sendiri, minimalnya 2 jam per hari
+                    </li>
+                    <li><strong>Cara ketiga :</strong> Membuat catatan</li>
+                    <li><strong>Cara keempat :</strong> Belajar dengan menonton video</li>
+                    <li><strong>Cara kelima :</strong> Jangan mau diganggu apabila sedang belajar, kecuali panggilan
+                        Allah dan orang tua</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
